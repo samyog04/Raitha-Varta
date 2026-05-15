@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ask an Expert"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etQuery"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="Describe your crop problem here..."
+        android:gravity="top"
+        android:padding="12dp"
+        android:background="@android:color/white"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnAsk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get AI Advice"
+        android:backgroundTint="#2E7D32"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

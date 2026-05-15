@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.raithavarta.ui.fragment.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_stories"
+            app:destination="@id/successStoriesFragment" />
+        <action
+            android:id="@+id/action_home_to_expert"
+            app:destination="@id/expertAskFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/successStoriesFragment"
+        android:name="com.raithavarta.ui.fragment.SuccessStoriesFragment"
+        android:label="Success Stories" />
+
+    <fragment
+        android:id="@+id/expertAskFragment"
+        android:name="com.raithavarta.ui.fragment.ExpertAskFragment"
+        android:label="Expert Ask" />
+
+</navigation>
