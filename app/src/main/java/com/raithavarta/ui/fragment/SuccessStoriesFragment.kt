@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.raithavarta.RaithaVartaApp
 import com.raithavarta.databinding.FragmentSuccessStoriesBinding
 import com.raithavarta.ui.adapter.SuccessStoryAdapter
@@ -32,6 +33,7 @@ class SuccessStoriesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val adapter = SuccessStoryAdapter()
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
         viewModel.allStories.observe(viewLifecycleOwner) { stories ->
             adapter.submitList(stories)

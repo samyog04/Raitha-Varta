@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.raithavarta.RaithaVartaApp
 import com.raithavarta.databinding.FragmentHomeBinding
 import com.raithavarta.ui.adapter.TipPagerAdapter
@@ -33,7 +34,8 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = TipPagerAdapter()
-        binding.viewPager.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.adapter = adapter
 
         viewModel.allTips.observe(viewLifecycleOwner) { tips ->
             adapter.submitList(tips)

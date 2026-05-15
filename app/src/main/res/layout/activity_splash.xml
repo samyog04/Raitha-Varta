@@ -5,37 +5,63 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#2E7D32">
+    android:background="@color/primary">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🌾"
-        android:textSize="80sp"
-        android:layout_marginBottom="16dp" />
+    <!-- Circular background behind emoji -->
+    <FrameLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="24dp">
 
+        <View
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/circle_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="🌾"
+            android:textSize="72sp"/>
+
+    </FrameLayout>
+
+    <!-- App name in Kannada -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ರೈಥ-ವಾರ್ತಾ"
-        android:textSize="36sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:layout_marginBottom="8dp" />
+        android:letterSpacing="0.05"
+        android:layout_marginBottom="6dp"/>
 
+    <!-- App name in English -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Raitha-Varta"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textColor="#C8E6C9"
-        android:layout_marginBottom="24dp" />
+        android:letterSpacing="0.1"
+        android:layout_marginBottom="32dp"/>
 
+    <!-- Divider line -->
+    <View
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:background="#A5D6A7"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Tagline -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Smart Farming Advisory"
         android:textSize="14sp"
-        android:textColor="#A5D6A7" />
+        android:textColor="#A5D6A7"
+        android:letterSpacing="0.15"/>
 
 </LinearLayout>

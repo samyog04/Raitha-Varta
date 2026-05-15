@@ -15,6 +15,16 @@ class TipPagerAdapter : ListAdapter<Tip, TipPagerAdapter.TipViewHolder>(DiffCall
         fun bind(tip: Tip) {
             binding.tvTitle.text = tip.title
             binding.tvDescription.text = tip.description
+            binding.tvEmoji.text = when {
+                tip.title.contains("Water", ignoreCase = true) -> "💧"
+                tip.title.contains("Pest", ignoreCase = true) -> "🐛"
+                tip.title.contains("Soil", ignoreCase = true) -> "🌱"
+                tip.title.contains("Fertilizer", ignoreCase = true) -> "🧪"
+                tip.title.contains("Irrigation", ignoreCase = true) -> "🚿"
+                tip.title.contains("Spacing", ignoreCase = true) -> "📏"
+                tip.title.contains("Harvest", ignoreCase = true) -> "🌾"
+                else -> "🌿"
+            }
         }
     }
 
